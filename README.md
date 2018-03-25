@@ -1,5 +1,7 @@
 # musicrec
 
+@Author: Chentianyu
+
 名称：好音乐分享小程序
 
 功能：互联网音乐上传
