@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis-org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.imooc.demo.dao.MusicRecDao">
+    <insert id="insertMusicRec">
+        INSERT INTO music_rec (music_author, music_name, music_src, poster_src, music_comment, shared_time, user_id)
+        VALUES (#{musicAuthor}, #{musicName}, #{musicSrc}, #{posterSrc}, #{musicComment}, #{sharedTime}, #{userId})
+    </insert>
+    <select id="queryListAll" resultType="com.imooc.demo.entity.MusicRec">
+        SELECT id, music_author, music_name, music_comment, poster_src, music_src, like_number, shared_time, user_id
+        FROM music_rec ORDER BY like_number DESC
+    </select>
+    <select id="queryListTopThree" resultType="com.imooc.demo.entity.MusicRec">
+        SELECT id, music_author, music_name, music_comment, poster_src, music_src, like_number, shared_time, user_id
+        FROM music_rec ORDER BY like_number DESC limit 3
+    </select>
+    <select id="queryListByUserId" resultType="com.imooc.demo.entity.MusicRec">
+        SELECT id, music_author, music_name, music_comment, poster_src, music_src, like_number, shared_time, user_id
+        FROM music_rec WHERE user_id = #{userId} ORDER BY shared_time DESC
+    </select>
+    <update id="increaseLikeNumberByMusicId" parameterType="Integer">
+        UPDATE music_rec SET like_number=like_number+1 WHERE id=#{musicId}
+    </update>
+    <select id="queryListByMusicId" parameterType="Integer" resultType="com.imooc.demo.entity.MusicRec">
+        SELECT id, music_author, music_name, music_comment, poster_src, music_src, like_number, shared_time, user_id
+        FROM music_rec WHERE id=#{musicId}
+    </select>
+    <update id="reduceLikeNumberByMusicId" parameterType="Integer">
+        UPDATE music_rec SET like_number=like_number-1 WHERE id=#{musicId}
+    </update>
+</mapper>

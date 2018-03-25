@@ -1,0 +1,34 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/profile/profile",
+    "pages/detail/detail",
+    "pages/upload/upload",
+    "pages/myrec/myrec",
+    "pages/mylike/mylike",
+    "pages/other/other"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "好音乐",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F2f2f2"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "Top3"
+    }, {
+      "pagePath": "pages/detail/detail",
+      "text": "全部推荐"
+    }, {
+    "pagePath": "pages/upload/upload",
+    "text": "我要推荐"
+    },
+    {
+      "pagePath": "pages/profile/profile",
+      "text": "个人中心"
+    }]
+  }
+}

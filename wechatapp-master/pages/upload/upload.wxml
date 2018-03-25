@@ -1,0 +1,27 @@
+<view class='container'>
+  <form class="form" bindsubmit='submitform'>
+    <view class="section">
+      <view class="section__title">音乐名称</view>
+      <input class='input' name="input_name" placeholder="输入" />
+    </view>
+    <view class="section">
+      <view class="section__title">音乐作者</view>
+      <input class='input' name="input_author" placeholder="输入" />
+    </view>
+    <view class="section">
+      <view class="section__title">音乐资源地址</view>
+      <input maxlength='500' class='input' name="input_music" placeholder="输入" />
+    </view>
+    <view class="section">
+      <view class="section__title">封面资源地址</view>
+      <input class='input' name="input_poster" placeholder="输入" />
+    </view>
+    <view class="section">
+      <view class="section__title">推荐理由</view>
+      <input maxlength='500' class='input' name="input_comm" placeholder="输入" />
+    </view>
+    <view class="btn">
+      <button formType="submit">上传</button>
+    </view>
+  </form>
+</view>

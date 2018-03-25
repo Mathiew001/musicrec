@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="card_wrap">
+    <view animation="{{id === 0 ? animationData : ''}}" class="card_item card{{ id + 1 }} " wx:for="{{ listItems }}"  wx:key="unique" wx:for-index="id" wx:for-item="item">
+      <view class="card_audio">
+        <audio poster="{{item.musicrec.posterSrc}}" name="{{item.musicrec.musicName}}" author="{{item.musicrec.musicAuthor}}" src="{{item.musicrec.musicSrc}}" id="myAudio" controls='true'></audio>
+      </view>
+      <view class="card_info">
+        <text class="card_info_mes_title">推荐理由：</text>
+        <span class="card_info_mes_item">
+          {{ item.musicrec.musicComment }}
+        </span>
+        <view  id='{{item.user.userId}}' class="userinfo" bindtap='profileClick'>
+        <image class="userinfo-avatar" src="{{item.user.avatarUrl}}" background-size="cover"></image>
+        <text class="userinfo-nickname">{{item.user.nickName}}</text>
+        </view>
+      </view>
+       <!-- <view id='{{item.musicrec.id}}={{item.doLike}}' class="{{item.doLike?'btn-cta like_btn_like':'btn-cta like_btn_normal'}}" bindtap="like">
+        喜欢  {{item.musicrec.likeNumber}}
+      </view>  -->
+      <span class="change_icon" bindtap="slidethis" wx:if="{{ id === 0 }}">
+        <image bindtouchend="slidethis" src="../../images/changeicon.png"></image>
+      </span>
+      <image src="{{ item.cardImages }}"></image>
+    </view>
+  </view>
+</view>

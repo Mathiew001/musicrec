@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='selection'>
+    <view class="header">
+    </view>
+    <view class='list-item' wx:for="{{listItems}}" wx:for-item="item" wx:for-index="id">
+      <view class="list-item-image">
+        <audio poster="{{item.musicrec.posterSrc}}" name="{{item.musicrec.musicName}}" author="{{item.musicrec.musicAuthor}}" src="{{item.musicrec.musiceSrc}}" id="myAudio" controls='true'>
+        </audio>
+        <image src="{{item.user.avatarUrl}}" class='avtar'/>
+      </view>
+      <view class='list-item-text'>
+        <view class='text-title'>
+          <text>推荐理由：</text>
+        </view>
+        <view class='text-content'>
+          <text>{{item.musicrec.musicComment}}</text>
+        </view>
+      </view>
+      <view class="time">
+        <button id='{{item.musicrec.id}}={{item.doLike}}={{id}}' class="{{item.doLike?'like':'normal'}}" bindtap='like'>喜欢 {{item.musicrec.likeNumber}}</button>{{item.musicrec.sharedTime}}
+      </view>
+    </view>
+  </view>
+</view>

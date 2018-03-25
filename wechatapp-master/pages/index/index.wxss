@@ -1,0 +1,131 @@
+/**index.wxss**/
+@import "../../common.wxss";
+.card_wrap {
+  background: #f2f2f6;
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+.card_wrap .card_item {
+  position: absolute;
+  width: 81%;
+}
+
+.card_wrap .card_item .like_btn_normal {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -61px;
+  width: 40%;
+  background-color: gray;
+}
+
+.card_wrap .card_item .like_btn_like {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -61px;
+  width: 40%;
+  background-color: red;
+}
+
+.card_wrap .card_item span.change_icon image {
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  bottom: 40rpx;
+  left: 50%;
+  margin-left: -26px;
+  box-shadow:none;
+
+}
+.card_wrap .card_item .card_info {
+  position: absolute;
+  height: 200px;
+  width: 87%;
+  bottom: 100rpx;
+  background-color: gainsboro;
+  border-radius: 3%;
+  padding: 10px;
+  /*border: 1px #E3E3E3 solid;*/
+}
+.card_wrap .card_item .card_info .card_info_mes_title {
+  font-size: 18px;
+  line-height: 24px;
+  position: flex;
+}
+.card_wrap .card_item .card_info .card_info_mes_item {
+  position: flex;
+  margin-top: 10px;
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card_wrap .card_item.card1 {
+  /*top: 62px;
+  left: 25px;*/
+  transform: translateY(62px) translateX(25px);
+  z-index: 3
+}
+.card_wrap .card_item.card1 .card_info {
+  top: 320rpx;
+  left: 20rpx;
+  /*transform: translateY(270px) translateX(20px);*/
+}
+.card_wrap .card_item.card2 {
+  /*top: 44px;
+  left: 41px;*/
+  z-index: 2;
+  transform: translateY(44px) translateX(41px);
+}
+.card_wrap .card_item.card2 .card_info {
+  top: 195px;
+  left: 14px;
+  border-color: #fff;
+}
+
+.card_wrap .card_item.card3 {
+  /*top: 28px;
+  left: 51px;*/
+  transform: translateY(28px) translateX(51px);
+  z-index: 1;
+}
+
+.card_wrap .card_item.card3 .card_info {
+  top: 73px;
+  left: 50px;
+  border-color: #fff;
+}
+.card_wrap .card_item image {
+  display: block;
+  width: 100%;
+  height: 500px;    
+  border-radius: 6px;
+  box-shadow: 6px 23px 50px 10px #ccc 
+}
+
+.card_audio {
+  position: absolute;
+  top: 150rpx;
+}
+
+.card_wrap .card_item .card_info .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+}
+
+.card_wrap .card_item .card_info .userinfo .userinfo-avatar {  
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin: 10rpx;
+}
+
+
+
+

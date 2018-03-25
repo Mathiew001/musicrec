@@ -1,0 +1,106 @@
+/**index.wxss**/
+
+.selection {
+  
+}
+.header {
+  border-bottom: 8rpx solid gray;
+}
+
+
+.text-all {
+  color: green;
+  font-size: 10px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content-item {
+  height: 250rpx;
+  width:45%;
+  margin: 7px;
+  position: relative;
+}
+
+.content-item image {
+  height: 100%;
+  width: 100%;
+}
+
+.content-item-text {
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  font-size: 15px;
+  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), rgba(0,0,0,0));
+  width: 98%;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-bottom: 1%;
+}
+
+.list-item {
+  height: 500rpx;
+  width: 100%;
+  border-bottom: 8rpx solid gray;
+}
+
+.list-item-images {
+  height: 71rpx;
+  width: 100%;
+  position: relative;
+}
+
+.list-item-text {
+  height: 250rpx;
+  width: 100%; 
+}
+
+.avtar {
+  height: 75rpx;
+  width: 75rpx;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 30rpx;
+}
+
+.text-title {
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+}
+
+.text-content {
+  font-size: 30rpx;
+  color: gray;
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+
+}
+
+ .time {
+  padding-left: 20rpx;
+  height: 100rpx;
+  
+}
+
+.normal {
+  width: 150rpx;
+  font-size: 20rpx;
+  background-color: gray;
+  color: white;
+  margin-left: 10rpx;
+} 
+
+.like {
+  width: 150rpx;
+  font-size: 20rpx;
+  background-color: red;
+  color: white;
+  margin-left: 10rpx;
+}

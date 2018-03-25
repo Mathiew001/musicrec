@@ -1,0 +1,19 @@
+<!--logs.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <block wx:if="{{hasUserInfo}}">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto" bindtap='myRec'>
+    <text>我推荐的音乐</text>
+  </view>
+    <view class="usermotto" bindtap='myLike'>
+    <text>我喜欢的音乐</text>
+  </view>
+</view>
