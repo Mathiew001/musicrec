@@ -20,3 +20,5 @@
         后端：springboot
         数据库：mysql
         工具：微信小程序开发者工具/IntelliJ
+ 
+ 部署环境：localhost:8080
