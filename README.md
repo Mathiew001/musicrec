@@ -21,4 +21,7 @@
         数据库：mysql
         工具：微信小程序开发者工具/IntelliJ
  
- 部署环境：localhost:8080
+部署环境：localhost:8080
+ 
+前端代码：wechatapp-master
+后端代码：demo
