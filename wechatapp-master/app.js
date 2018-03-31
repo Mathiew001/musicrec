@@ -1,7 +1,7 @@
 App({
   globalData: {
     userInfo: null,
-    userId: null
+    userId: null,
   },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
@@ -31,7 +31,7 @@ App({
               that.globalData.userInfo = res.userInfo,
               console.log(res)
               wx.request({
-                url: "http://localhost:8080/login",
+                url: "http://59.111.105.184/login",
                 data: {
                   userId: that.globalData.userId,
                   nickName: that.globalData.userInfo.nickName,

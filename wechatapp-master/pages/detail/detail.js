@@ -1,7 +1,7 @@
 var app = getApp()
 var GetList = function (that) {
   wx.request({
-    url: "http://localhost:8080/list/listall",
+    url: "http://59.111.105.184/list/listall",
     data: {
       pageSize: 5,
       pageNum: that.data.p,
@@ -10,6 +10,7 @@ var GetList = function (that) {
     method: "GET",
     success: function (res) {
       var l = that.data.listItems
+      console.log(res)
       for (var i = 0; i < res.data.length; i++) {
         l.push(res.data[i])
       }
@@ -24,7 +25,8 @@ var GetList = function (that) {
 Page({
   data: {
     listItems: [],
-    p: 1
+    p: 1,
+    flag: false
   },
   
   profileClick: function(e) {
@@ -41,7 +43,7 @@ Page({
     var index = e.target.id.split("=")[2]
     if(doLike == "true") {
       wx.request({
-        url: 'http://localhost:8080/like',
+        url: 'http://59.111.105.184/like',
         data: {
           musicId: id,
           userId: app.globalData.userId,
@@ -60,7 +62,7 @@ Page({
     }
     else {
       wx.request({
-        url: 'http://localhost:8080/like',
+        url: 'http://59.111.105.184/like',
         data: {
           musicId: id,
           userId: app.globalData.userId,
@@ -94,11 +96,15 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log("onshow")
-    this.setData({p: 1})
-    this.setData({listItems: []})
-    var that = this
-    GetList(that)
+    if (this.data.flag) {
+      console.log("onshow")
+      this.setData({p: 1})
+      this.setData({listItems: []})
+      var that = this
+
+      GetList(that)  
+    }
+    this.setData({ flag: true })
   },
 
   /**
@@ -127,6 +133,7 @@ Page({
    */
   onReachBottom: function () {
     var that = this
+    console.log("pull")
     GetList(that)
   },
 

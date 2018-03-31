@@ -16,7 +16,7 @@ Page({
     var index = e.target.id.split("=")[2]
     if (doLike == "true") {
       wx.request({
-        url: 'http://localhost:8080/like',
+        url: 'http://59.111.105.184/like',
         data: {
           musicId: id,
           userId: app.globalData.userId,
@@ -35,7 +35,7 @@ Page({
     }
     else {
       wx.request({
-        url: 'http://localhost:8080/like',
+        url: 'http://59.111.105.184/like',
         data: {
           musicId: id,
           userId: app.globalData.userId,
@@ -61,7 +61,7 @@ Page({
       var that = this
       this.setData({userId: options.userId})
       wx.request({
-        url: 'http://localhost:8080/list/hisrec',
+        url: 'http://59.111.105.184/list/hisrec',
         data: {
           myUserId: app.globalData.userId,
           hisUserId: that.data.userId

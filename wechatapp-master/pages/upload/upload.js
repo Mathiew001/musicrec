@@ -9,7 +9,7 @@ Page({
   },
   submitform: function (e) {
     wx.request({
-      url: "http://localhost:8080/upload",
+      url: "http://59.111.105.184/upload",
       data: {
         userId: app.globalData.userId,
         musicSrc: e.detail.value.input_music,

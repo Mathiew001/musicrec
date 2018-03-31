@@ -41,7 +41,7 @@ Page({
     var doLike = e.target.id.split("=")[1]
     if (doLike == "true") {
       wx.request({
-        url: 'http://localhost:8080/pro/like',
+        url: 'http://59.111.105.184/pro/like',
         data: {
           musicId: id,
           userId: app.globalData.userId,
@@ -66,7 +66,7 @@ Page({
     }
     else if (doLike == "false") {
       wx.request({
-        url: 'http://localhost:8080/pro/like',
+        url: 'http://59.111.105.184/pro/like',
         data: {
           musicId: id,
           userId: app.globalData.userId,
@@ -110,7 +110,7 @@ Page({
     }
     setTimeout(function getList() {
       wx.request({
-        url: "http://localhost:8080/list/topthree",
+        url: "http://59.111.105.184/list/topthree",
         data: {
           userId: app.globalData.userId
         },
